@@ -1,0 +1,28 @@
+# Первая задача
+print('Hi, its a first task of the second homework')
+data = [[1, 3, 'oops'], 5, 3.6, True, 'something']
+data_len = len(data)
+temp_num = 0
+while data_len > temp_num:
+    print(f'First element is ({data[-1]}), its type: {type(data[-1])} ')
+    data.pop()
+    temp_num = temp_num + 1
+
+# Вторая задача
+print('Its a second task of the second homework')
+data = list(input('Your list: '))
+if len(data) % 2 != 0:
+    data.append('temp')
+    data[::2], data[1::2] = data[1::2], data[::2]
+    data.remove('temp')
+else:
+    data[::2], data[1::2] = data[1::2], data[::2]
+print(data)
+
+# Третья задача (её и дальнейшие не успел закончить, к сожалению :( 
+print('Its a third task of the second homework')
+monthes = (1, 2, 12, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+seasons = ['winter', 'spring', 'summer', 'autumn']
+calendar = {monthes[0:3]:seasons[1], monthes[3:6]:seasons[2], monthes[6:9]:seasons[3], monthes[9::]:seasons[4]}
+a = int(input('Month: '))
+print(f'Its season: {calendar.get(monthes[a])}')
